@@ -1,0 +1,70 @@
+<!--pages/storeindex/storeindex.wxml-->
+<image style='width:100%;height:150px;' src='../../images/bg.jpg'></image>
+<view class='title'>
+  <view class='title1'>
+    <image src='../../images/tu1.png'></image>
+  </view>
+  <view class='title1-word'>
+    <text style='font-size:16px;'>
+          {{name}}的店
+       </text>
+    <view style='font-size:14px;'>
+      商品：
+      <text>{{kucun}}</text>件 已售：
+      <text>{{yishou}}</text>
+    </view>
+  </view>
+  <view class='title2'>
+    <image src='../../images/tu2.png'></image>
+    <view>客服</view>
+  </view>
+</view>
+
+<scroll-view scroll-x="true" class="weui-navbar" scroll-into-view="{{topView}}" style='margin-top:-4px;padding-top:2px;'>
+  <block wx:for="{{tabs}}" wx:key='key'>
+    <view id="{{item}}" class="{{activeIndex == index ?'item_on':''}} default-item" bindtap="tabClick" style="width:{{tabW}}px;line-height:5px;" data-item='{{item}}'>
+      {{item}}
+    </view>
+  </block>
+  <view class="weui-navbar-slider" style="transform:translateX({{slideOffset}}px);"></view>
+</scroll-view>
+
+<view class="rec" />
+
+<swiper current="{{activeIndex}}" class="swiper-box" style='height:{{wHeight}}' duration="100" bindchange="bindChange">
+  <block wx:for="{{pageData}}" wx:key='key'>
+    <swiper-item scroll-y class="swiper-item">
+
+      <swiper-view class='list clearFix'>
+        <view class='shop-list' wx:for="{{item}}">
+          <image class='image-list' src='{{item.src}}'></image>
+          <view class='jieshao'>
+            {{item.message}}
+          </view>
+          <view class='price'>
+            ￥
+            <text>{{item.price}}</text>
+          </view>
+          <view class='liang'>
+            <view class='shopcar2'>
+              销量：{{item.xiaoliang}}
+            </view>
+            <view class='shopcar1'>
+              <image style='width:25px;height:25px;' src='../../images/tu4.png'></image>
+            </view>
+          </view>
+        </view>
+      </swiper-view>
+
+    
+      
+    </swiper-item>
+  </block>
+</swiper>
+  <view bindtap='click'>
+        跳
+      </view>
+
+
+
+

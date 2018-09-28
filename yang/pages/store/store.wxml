@@ -1,0 +1,86 @@
+<!--pages/store/store.wxml-->
+
+<view class='title'>
+    <view class='title-left'>
+        <view style='margin-top:10px;'>
+         <image src='../../images/icon-tubiao.png'></image>
+        </view>
+        <text style=' font-weight: 900;'>
+           当前店铺:
+       </text>
+        <text style='margin-left:5px;'>
+           {{name}}的店
+        </text>
+    </view>
+  
+    <view class='select_box title-right'>
+    <view style='margin-right:5px;' class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData[index]}}</text>
+        <image class='select_img {{show&&"select_img_rotate"}}' src='../../images/xiangxia.png'></image>         
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
+</view>
+</view>
+
+
+
+
+<view class='banner'>
+    <text>
+      今日付款金额（元）
+    </text>
+    <text>
+       0.00
+    </text>
+    <view>
+       <view class='banner-bottom'>
+           <view>
+              <text>
+              付款人数
+            </text>
+            <text>
+              {{numperson}}
+            </text>
+           </view>
+              <view class="border" > </view>
+            <view>
+              <text>
+              付款订单数
+            </text>
+            <text>
+              {{numding}}
+            </text>
+           </view>
+           <view class="border" > </view>
+           <view>
+              <text>
+              付款件数
+            </text>
+            <text>
+              {{numjian}}
+            </text>
+           </view>
+       </view>
+    </view>
+</view>
+
+<view class='last'>
+    <view class='last1' wx:for="{{array}}">
+        <image src='{{item.src}}'></image> 
+        <text>
+          {{item.message}}
+        </text> 
+    </view>
+  
+</view>
+
+
+
+
+<view bindtap='click'>
+  跳
+</view>
+
+

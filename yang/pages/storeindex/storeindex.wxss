@@ -1,0 +1,156 @@
+/* pages/storeindex/storeindex.wxss */
+
+page {
+  height: 100%;
+}
+
+.weui-navbar {
+  width: 100%;
+  border-bottom: 1px solid #999;
+  box-sizing: border-box;
+  white-space: nowrap;
+  z-index: 100;
+  background: white;
+  height: 30px;
+}
+
+.weui-navbar .default-item {
+  /*width:25%;*/
+  display: inline-block;
+  text-align: center;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  height: 7%;
+  padding-bottom: 38rpx;
+}
+
+.weui-navbar .item_on {
+  color: #ff6200;
+  border-bottom: 1px solid #ff6200;
+}
+
+.weui-navbar-slider {
+  position: absolute;
+  width: 160rpx;
+  height: 2px;
+  content: "";
+  bottom: 0px;
+  left: 12.5rpx;
+  transition: transform 0.3s;
+}
+
+
+
+.swiper-box .swiper-item {
+  overflow: auto;
+
+  height: 100%;
+}
+
+/* pages/storeindex/storeindex.wxss */
+
+.title {
+  width: 100%;
+  height: 142px;
+  padding: 0 15px;
+  padding-top: 60px;
+  position: absolute;
+  top: 0;
+}
+
+.title1 image {
+  width: 65px;
+  height: 65px;
+}
+
+.title1 {
+  float: left;
+}
+
+.title1-word {
+  margin-left: 5px;
+  float: left;
+  color: #d7f1f2;
+  margin-top: -14px;
+}
+
+.title2 {
+  float: right;
+  margin-top: 10px;
+  color: #d7f1f2;
+}
+
+.title2 image {
+  width: 30px;
+  height: 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 3px solid #ddd;
+  height: 35px;
+  color: #000;
+  background: #fff;
+  margin-top: -3px;
+}
+
+.active {
+  color: #ff8729;
+  border-bottom: 1px solid #ff8729;
+}
+
+.shop-list {
+  width: 48%;
+  height: 350px;
+  padding: 0 10px;
+  background: #fff;
+  margin: 5px 0;
+  padding-bottom: 10px;
+  float: left;
+}
+
+.image-list {
+  width: 100%;
+  height: 250px;
+}
+
+.jieshao {
+  color: #363636;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  height: 40px;
+}
+
+.list {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.clearFix:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: '';
+}
+
+.shopcar1 {
+  float: right;
+}
+
+.shopcar2 {
+  float: left;
+}
+
+.price {
+  color: #d75b11;
+  margin-top: 5px;
+}
+
+.liang {
+  margin-top: 5px;
+}
